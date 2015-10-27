@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        
+        <record id="view_inherit_so_view_form" model="ir.ui.view">
+            <field name="name">sale.order.form</field>
+            <field name="model">sale.order</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook/page[@string='Other Information']" position="after">
+                    <page string="Payment Terms">
+                        <group>
+                            <group>
+                                <div>
+                                    <label for="down_payment_3" string="Down Payment(%)"/>
+                                    <field name="down_payment_3" class="oe_inline"/> Result
+                                    <field name="down_payment_amount_3" nolabel="1" />
+                                </div>
+                            </group>
+                        </group>
+                        <group>
+                            <group string="Unite's first 3 years Installments">
+                            </group>
+                                <div>
+                                    <label for="start_date_3" string="Start Date"/>
+                                    <field name="start_date_3" class="oe_inline"/> End Date
+                                    <field name="end_date_3" class="" nolabel="1" />
+                                </div>
+                        </group>
+                            
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</openerp>

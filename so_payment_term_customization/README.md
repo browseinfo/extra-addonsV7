@@ -1,0 +1,1 @@
+# so_payment_term_customization
